@@ -1,0 +1,108 @@
+.prices {}
+
+.pricesBlock {
+  border-radius: 13px;
+  background-color: #fff;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+  padding: 25px 20px 30px 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.pricesBlock-title {
+  text-align: center;
+  margin: 0 0 15px 0;
+}
+
+.pricesBlock-titleText {
+  display: block;
+  color: #e6a825;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.pricesBlock-titlePrice {
+  display: block;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: normal;
+  color: #47b170;
+}
+
+.pricesBlock-titlePriceAmount {
+  font-size: 36px;
+  line-height: 36px;
+  margin-bottom: 0;
+}
+
+.pricesBlock-description {
+  margin-bottom: 25px;
+}
+
+.pricesBlock-descriptionSection {
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.pricesBlock-descriptionTitle {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  font-weight: normal;
+}
+
+.pricesBlock-descriptionTitle_inline {
+  display: inline-block;
+}
+
+.pricesBlock-descriptionPara {
+  color: #919599;
+  margin: 0;
+}
+
+.pricesBlock-buttonsBox {
+  display: flex;
+  margin: auto 0 0 0;
+}
+
+.pricesBlock-orderButton {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 0 0;
+  width: 150px;
+}
+
+.pricesBlock-viberButton {
+  width: 41px;
+  height: 41px;
+  margin-left: 20px;
+  background: #7d5fea url("../assets/icon--viber.svg") center no-repeat;
+  font-size: 0;
+  opacity: 0.7;
+}
+
+.pricesBlock-telegramButton {
+  width: 41px;
+  height: 41px;
+  margin-left: 20px;
+  background: #39b4f2 url("../assets/icon--telegram.svg") center no-repeat;
+  font-size: 0;
+  opacity: 0.7;
+}
+
+@media screen and (min-width: 769px) {
+  .prices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .pricesBlock {
+    width: 48%;
+  }
+}

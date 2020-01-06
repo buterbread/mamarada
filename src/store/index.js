@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import locales from './locales'
+import cosmetics from './cosmetics'
 
 Vue.use(Vuex);
 
@@ -10,6 +12,10 @@ export function createStore() {
     },
     mutations: {},
     actions: {},
-    modules: {}
+    getters: {},
+    modules: {
+      locales,
+      cosmetics
+    },
   })
 }

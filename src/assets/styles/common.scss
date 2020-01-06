@@ -1,0 +1,81 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #333;
+  text-size-adjust: none;
+}
+
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+a {
+  color: #2ea8e5;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 200%;
+  line-height: 1.2;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 180%;
+  line-height: 1.2;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 160%;
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 140%;
+  font-weight: normal;
+}
+
+h5 {
+  font-size: 120%;
+  font-weight: normal;
+}
+
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+
+.wrapper {
+  max-width: 1920px;
+  margin: auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  min-width: 320px;
+  max-width: 768px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 374px) {
+  .container {
+    padding: 0 10px;
+  }
+}
