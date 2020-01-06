@@ -36,22 +36,22 @@
 
         <ul class="headerMenu">
           <li class="headerMenu-item">
-            <a href="#nannyToGo" class="headerMenu-link">{{ $t('NannyToGo') }}</a>
+            <router-link to="#nannyToGo" class="headerMenu-link">{{ $t('NannyToGo') }}</router-link>
           </li>
           <li class="headerMenu-item">
-            <a href="#nannyForFamily" class="headerMenu-link">{{ $t('NannyForFamily') }}</a>
+            <router-link to="#nannyForFamily" class="headerMenu-link">{{ $t('NannyForFamily') }}</router-link>
           </li>
           <li class="headerMenu-item">
-            <a href="#kidsWithIndividualNeeds" class="headerMenu-link">{{ $t('KidsWithIndividualNeeds') }}</a>
+            <router-link to="#kidsWithIndividualNeeds" class="headerMenu-link">{{ $t('KidsWithIndividualNeeds') }}</router-link>
           </li>
           <li class="headerMenu-item">
-            <a href="#autoDaddy" class="headerMenu-link">{{ $t('AutoDaddy') }}</a>
+            <router-link to="#autoDaddy" class="headerMenu-link">{{ $t('AutoDaddy') }}</router-link>
           </li>
           <li v-if="false" class="headerMenu-item">
-            <a href="#babyBoxes" class="headerMenu-link">{{ $t('BabyBoxes') }}</a>
+            <router-link to="#babyBoxes" class="headerMenu-link">{{ $t('BabyBoxes') }}</router-link>
           </li>
           <li class="headerMenu-item">
-            <a href="#kidsCosmetics" class="headerMenu-link">{{ $t('KidsCosmetics') }}</a>
+            <router-link to="#kidsCosmetics" class="headerMenu-link">{{ $t('KidsCosmetics') }}</router-link>
           </li>
         </ul>
 

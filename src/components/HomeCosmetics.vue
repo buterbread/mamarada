@@ -3,7 +3,7 @@
     <h2 class="homeSection-title">{{ $t('KidsCosmetics') }}</h2>
     <ul class="kidsCosmetics">
       <li v-for="item in cosmeticsList" :key="item.id" class="kidsCosmetics-item">
-        <a :href="`/cosmetics/${item.id}`" class="kidsCosmetics-link">
+        <router-link :to="`/cosmetics/${item.id}`" class="kidsCosmetics-link">
           <div class="kidsCosmetics-imageBox">
             <img :src="item.previewUrl" :alt="item.title" class="kidsCosmetics-image" />
           </div>
@@ -16,7 +16,7 @@
               <p class="kidsCosmetics-descriptionPara">{{item.info[locale].description}}</p>
             </div>
           </div>
-        </a>
+        </router-link>
       </li>
     </ul>
   </div>
