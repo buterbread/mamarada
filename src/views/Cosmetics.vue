@@ -39,6 +39,9 @@ export default {
 </script>
 
 <style lang="scss">
+  @import '../assets/styles/header.scss';
+  @import '../assets/styles/body.scss';
+
   .details {
     color: #333;
   }

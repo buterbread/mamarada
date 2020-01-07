@@ -15,7 +15,7 @@ export function createRouter() {
       },
       {
         path: '/cosmetics/:id',
-        name: 'Cosmetics',
+        name: 'cosmeticsDetails',
         component: Cosmetics
       },
       {
@@ -27,6 +27,7 @@ export function createRouter() {
 
     const router = new VueRouter({
       routes,
+      mode: 'history',
       scrollBehavior: (to) => {
         if (to.hash) {
           return {
