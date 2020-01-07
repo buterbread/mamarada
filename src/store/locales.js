@@ -1,16 +1,8 @@
-function getInitialLocale() {
-  if (process.browser) {
-    return window.localStorage.getItem('locale') || 'ua'
-  }
-
-  return 'ua'
-}
-
-export default {
+export default ({ lang } = {}) => ({
   namespaced: true,
 
   state: {
-    locale: getInitialLocale()
+    locale: lang
   },
 
   mutations: {
@@ -24,7 +16,7 @@ export default {
       const { commit } = state;
       commit('SET_LOCALE', locale);
 
-      window.localStorage.setItem('locale', locale);
+      document.cookie=`lang=${locale}`;
     }
   },
 
@@ -33,4 +25,4 @@ export default {
       return state.locale
     }
   }
-}
+})

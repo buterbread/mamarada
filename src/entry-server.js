@@ -1,5 +1,25 @@
 import { createApp } from './main'
 
+function extractLang(context) {
+  const { req } = context || {};
+  const { headers } = req || {};
+  const { cookie: cookieString } = headers || {};
+
+  if (!cookieString) {
+    return 'ua'
+  }
+
+  const result = {};
+  cookieString.split(' ').forEach(item => {
+    const [key, value] = item.split('=');
+    result[key] = value;
+  })
+
+  const { lang } = result;
+
+  return lang;
+}
+
 const prepareUrlForRouting = url => {
   const { BASE_URL } = process.env
   return url.startsWith(BASE_URL.replace(/\/$/, ''))
@@ -13,9 +33,9 @@ export default context => {
       app,
       router,
       store,
-    } = await createApp()
+    } = await createApp({ lang: extractLang(context) })
 
-    router.push(prepareUrlForRouting(context.url))
+    router.push(prepareUrlForRouting(context.url));
 
     router.onReady(() => {
       context.rendered = () => {

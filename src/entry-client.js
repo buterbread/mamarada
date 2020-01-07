@@ -1,6 +1,9 @@
 import { loadAsyncComponents } from '@akryum/vue-cli-plugin-ssr/client'
-
 import { createApp } from './main'
+
+function getLang() {
+  return window && window.__INITIAL_STATE__ && window.__INITIAL_STATE__.locales.locale;
+}
 
 createApp({
   async beforeApp ({
@@ -9,14 +12,12 @@ createApp({
     await loadAsyncComponents({ router })
   },
 
-  afterApp ({
-    app,
-    router,
-      store,
-  }) {
+  afterApp ({ app, router, store }) {
     store.replaceState(window.__INITIAL_STATE__)
     router.onReady(() => {
       app.$mount('#app')
     })
-  }
+  },
+
+  lang: getLang()
 })

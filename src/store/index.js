@@ -5,7 +5,7 @@ import cosmetics from './cosmetics'
 
 Vue.use(Vuex);
 
-export function createStore() {
+export function createStore({ lang } = {}) {
   return new Vuex.Store({
     state() {
       return {}
@@ -14,7 +14,7 @@ export function createStore() {
     actions: {},
     getters: {},
     modules: {
-      locales,
+      locales: locales({ lang }),
       cosmetics
     },
   })

@@ -6,9 +6,9 @@ import i18n from './i18n'
 
 Vue.config.productionTip = false;
 
-export async function createApp ({ beforeApp = () => {}, afterApp = () => {} } = {}) {
+export async function createApp ({ beforeApp = () => {}, afterApp = () => {}, lang = 'ua' } = {}) {
   const router = createRouter();
-  const store = createStore();
+  const store = createStore({ lang });
 
   await beforeApp({
     router,
@@ -18,7 +18,7 @@ export async function createApp ({ beforeApp = () => {}, afterApp = () => {} } =
   const app = new Vue({
     router,
     store,
-    i18n,
+    i18n: i18n(lang),
     render: h => h(App)
   });
 
