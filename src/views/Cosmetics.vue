@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 import Header from '../components/HeaderLite.vue'
 import Footer from '../components/Footer.vue'
 
@@ -30,6 +30,11 @@ export default {
     this.$store.dispatch('cosmetics/fetchItemData', this.$route.params.id)
   },
   computed: {
+    ...mapState({
+      cosmetics: state => {
+        return state.cosmetics
+      }
+    }),
     ...mapGetters({
       cosmeticsItem: 'cosmetics/item',
       locale: 'locales/locale'
@@ -41,6 +46,7 @@ export default {
 <style lang="scss">
   @import '../assets/styles/header.scss';
   @import '../assets/styles/body.scss';
+  @import '../assets/styles/footer.scss';
 
   .details {
     color: #333;

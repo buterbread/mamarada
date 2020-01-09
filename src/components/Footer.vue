@@ -68,6 +68,4 @@ export default {
 }
 </script>
 
-<style lang="scss">
-  @import '../assets/styles/footer.scss';
-</style>
+<style lang="scss"></style>
