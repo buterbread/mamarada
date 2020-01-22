@@ -18,15 +18,24 @@ export default {
 
     SET_ITEM (state, data) {
       state.item = data
-    }
+    },
+
+    TOGGLE_LOADING (state, loading) {
+      state.loading = loading
+    },
   },
 
   actions: {
     async fetchListData ({ commit }) {
+      commit('TOGGLE_LOADING', true);
+
       const response = await api.cosmetics.getListData();
+
       const { data } = response;
 
-      commit('SET_LIST', data)
+      commit('SET_LIST', data);
+
+      commit('TOGGLE_LOADING', false);
     },
 
     async fetchItemData ({ commit }, id) {
@@ -43,6 +52,9 @@ export default {
     },
     item (state) {
       return state.item
+    },
+    loading (state) {
+      return state.loading
     }
   }
 }

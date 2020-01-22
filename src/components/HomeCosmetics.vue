@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'Cosmetics',
@@ -31,13 +31,9 @@ export default {
     this.$store.dispatch('cosmetics/fetchListData')
   },
   computed: {
-    ...mapState({
-      cosmetics: state => {
-        return state.cosmetics
-      }
-    }),
     ...mapGetters({
       cosmeticsList: 'cosmetics/list',
+      loading: 'cosmetics/loading',
       locale: 'locales/locale'
     })
   }

@@ -6,5 +6,6 @@ module.exports = {
       localeDir: 'locales',
       enableInSFC: true
     }
-  }
+  },
+  lintOnSave: process.env.NODE_ENV === 'production'
 }

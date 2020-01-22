@@ -10,7 +10,7 @@ function extractLang(context) {
   }
 
   const result = {};
-  cookieString.split(' ').forEach(item => {
+  cookieString.split('; ').forEach(item => {
     const [key, value] = item.split('=');
     result[key] = value;
   })
