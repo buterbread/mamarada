@@ -3,7 +3,7 @@
     <div class="container">
       <div class="headerWrapper">
         <div class="header-top">
-          <a href="/" class="headerLogo">Мама Рада :)</a>
+          <router-link to="/" class="headerLogo">Мама Рада :)</router-link>
 
           <ul class="langMenu">
             <li class="langMenu-item">

@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 
-const API_URL = 'http://mamarada.biz:6626';
+const API_URL = process.env.VUE_APP_API_URL;
 
 export default class Cosmetics {
   async getListData() {
