@@ -10,7 +10,7 @@
           <div class="kidsCosmetics-content">
             <div class="kidsCosmetics-header">
               <h3 class="kidsCosmetics-title">{{item.info[locale].title}}</h3>
-              <span class="kidsCosmetics-price">₴{{item.price}}</span>
+              <span class="kidsCosmetics-price">₴{{item.price.toFixed(2)}}</span>
             </div>
             <div class="kidsCosmetics-description">
               <p class="kidsCosmetics-descriptionPara">{{item.info[locale].description}}</p>
